@@ -1,9 +1,9 @@
 {
-  "built_at": "2026-03-01T18:49:14.074177",
-  "universe_size": 84,
-  "screener_results": 83,
-  "themes_count": 12,
-  "sectors_count": 9,
+  "built_at": "2026-03-01T19:25:06.371222",
+  "universe_size": 237,
+  "screener_results": 233,
+  "themes_count": 18,
+  "sectors_count": 11,
   "version": "1.1.0",
   "source": "yfinance",
   "note": "ATR extension and VARS formulas adapted from traderwillhu/market_dashboard"

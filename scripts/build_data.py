@@ -29,17 +29,53 @@ import yfinance as yf
 # ══════════════════════════════════════════════════════════
 
 SCAN_UNIVERSE = [
-    "NVDA", "PLTR", "COIN", "HOOD", "MSTR", "APP", "AFRM", "SMCI",
-    "RKLB", "IONQ", "AXON", "CRWD", "NET", "DDOG", "SNOW", "MDB",
-    "SHOP", "SQ", "MELI", "SE", "GRAB", "NU", "SOFI", "UPST",
-    "RDDT", "DUOL", "HIMS", "CELH", "DECK", "ON", "ANET", "ARM",
+    # ── Mega Cap Tech ──
+    "AAPL", "MSFT", "GOOG", "GOOGL", "AMZN", "META", "NVDA", "TSLA", "NFLX",
+    # ── Semiconductors ──
     "AVGO", "TSM", "ASML", "KLAC", "LRCX", "AMAT", "MRVL", "QCOM",
-    "AMD", "INTC", "MU", "DELL", "HPE", "PANW", "FTNT", "ZS",
-    "OKTA", "MNDY", "TEAM", "NOW", "ADBE", "CRM", "ORCL", "SAP",
-    "UBER", "LYFT", "DASH", "ABNB", "BKNG", "EXPE", "MAR",
-    "LLY", "NVO", "REGN", "VRTX", "ISRG", "DXCM", "PODD",
+    "AMD", "INTC", "MU", "ARM", "ON", "ANET", "SMCI", "DELL", "HPE",
+    "MCHP", "TXN", "ADI", "SNPS", "CDNS", "SWKS", "NXPI", "MPWR",
+    "ACLS", "RMBS", "CRUS", "DIOD", "AMBA", "SITM", "AOSL", "PI",
+    # ── AI / Software / Cloud ──
+    "PLTR", "NOW", "CRM", "ADBE", "ORCL", "SAP", "SNOW", "DDOG", "MDB",
+    "NET", "CRWD", "PANW", "FTNT", "ZS", "OKTA", "MNDY", "TEAM",
+    "HUBS", "WDAY", "VEEV", "BILL", "CFLT", "ESTC", "PATH", "AI",
+    "DOCN", "GTLB", "BRZE", "FRSH", "TOST", "PCOR", "IOT", "S",
+    "DKNG", "RBLX", "U", "TWLO", "TTD", "PINS", "SNAP",
+    # ── Crypto / Fintech ──
+    "COIN", "HOOD", "MSTR", "SQ", "AFRM", "UPST", "NU", "SOFI",
+    "PYPL", "V", "MA", "AXP", "FI", "GPN", "FOUR",
+    # ── Consumer Internet / E-commerce ──
+    "SHOP", "MELI", "SE", "GRAB", "UBER", "LYFT", "DASH", "ABNB",
+    "BKNG", "EXPE", "MAR", "CPNG", "ETSY", "W", "CHWY", "CARG",
+    # ── Social / Ad-Tech / Media ──
+    "APP", "RDDT", "DUOL", "GOOG", "ROKU", "MGNI", "PUBM", "DV",
+    "IAS", "ZD", "MTCH",
+    # ── Health / Biotech / MedTech ──
+    "LLY", "NVO", "REGN", "VRTX", "ISRG", "DXCM", "PODD", "HIMS",
+    "INSP", "GKOS", "NUVB", "RXRX", "DNA", "BEAM", "CRSP", "NTLA",
+    "MRNA", "BNTX", "ABBV", "TMO", "DHR", "ILMN", "ALGN", "HOLX",
+    "GEHC", "EW", "BSX", "SYK", "MDT", "ABT", "CAPR",
+    # ── Nuclear / Energy Infrastructure ──
     "GEV", "VST", "CEG", "OKLO", "SMR", "NNE", "LEU",
-    "GOOG", "META", "AMZN", "MSFT", "AAPL", "NFLX", "TSLA",
+    "FSLR", "ENPH", "SEDG", "RUN", "NEE", "AES", "EXC",
+    # ── Space / Defense / Industrial ──
+    "RKLB", "AXON", "LMT", "RTX", "NOC", "GD", "BA", "HWM",
+    "TDG", "HEXY", "ACHR", "JOBY", "LUNR", "RDW", "ASTS",
+    # ── Quantum Computing ──
+    "IONQ", "RGTI", "QBTS", "QUBT",
+    # ── Consumer Growth / Retail ──
+    "CELH", "DECK", "DUOL", "HIMS", "CAVA", "TXRH", "CMG", "WING",
+    "LULU", "NKE", "ONON", "BIRK", "ELF", "MNST", "COST", "WMT", "TGT",
+    # ── Industrials / Infrastructure ──
+    "CAT", "DE", "GE", "HON", "MMM", "EMR", "ITW", "PH",
+    "ETN", "AME", "GNRC", "PWR", "PRIM",
+    # ── Materials / Mining / Commodities ──
+    "FCX", "NEM", "GOLD", "AA", "CLF", "MP", "LAC", "ALB",
+    # ── REITs / Real Estate ──
+    "EQIX", "DLR", "AMT", "PLD", "O",
+    # ── Financials ──
+    "JPM", "GS", "MS", "SCHW", "IBKR", "LPLA",
 ]
 
 SECTOR_ETFS = {
@@ -82,7 +118,13 @@ THEME_MAP = {
     "Space / Defense": ["RKLB", "AXON"],
     "Quantum": ["IONQ"],
     "Health / GLP-1": ["LLY", "NVO", "REGN", "VRTX", "ISRG", "DXCM", "PODD", "HIMS"],
-    "Consumer Growth": ["CELH", "DECK", "DUOL", "HIMS"],
+    "Consumer Growth": ["CELH", "DECK", "DUOL", "HIMS", "CAVA", "ELF", "ONON", "BIRK"],
+    "EV / Clean Energy": ["TSLA", "FSLR", "ENPH", "SEDG", "RUN"],
+    "Quantum Computing": ["IONQ", "RGTI", "QBTS", "QUBT"],
+    "eVTOL / Urban Air": ["ACHR", "JOBY"],
+    "Space": ["RKLB", "LUNR", "RDW", "ASTS"],
+    "Defense": ["AXON", "LMT", "RTX", "NOC", "GD"],
+    "Gold / Mining": ["NEM", "GOLD", "FCX", "AA", "MP"],
 }
 
 # Reverse lookup: ticker -> list of themes

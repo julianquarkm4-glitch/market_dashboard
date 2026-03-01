@@ -1,6 +1,30 @@
 {
   "themes": [
     {
+      "name": "Defense",
+      "count": 5,
+      "symbols": [
+        "LMT",
+        "NOC",
+        "RTX",
+        "GD",
+        "AXON"
+      ],
+      "avg_vars": 0.161
+    },
+    {
+      "name": "Gold / Mining",
+      "count": 5,
+      "symbols": [
+        "FCX",
+        "GOLD",
+        "AA",
+        "NEM",
+        "MP"
+      ],
+      "avg_vars": 0.037
+    },
+    {
       "name": "AI / Chips",
       "count": 13,
       "symbols": [
@@ -35,19 +59,21 @@
       "avg_vars": -0.026
     },
     {
-      "name": "Health / GLP-1",
-      "count": 8,
+      "name": "Consumer Growth",
+      "count": 10,
       "symbols": [
-        "REGN",
-        "VRTX",
-        "LLY",
-        "DXCM",
-        "ISRG",
-        "PODD",
-        "NVO",
+        "BIRK",
+        "CAVA",
+        "DECK",
+        "ONON",
+        "ELF",
+        "CELH",
+        "DUOL",
+        "DUOL",
+        "HIMS",
         "HIMS"
       ],
-      "avg_vars": -0.092
+      "avg_vars": -0.081
     },
     {
       "name": "Space / Defense",
@@ -67,6 +93,34 @@
       "avg_vars": -0.115
     },
     {
+      "name": "EV / Clean Energy",
+      "count": 5,
+      "symbols": [
+        "ENPH",
+        "SEDG",
+        "TSLA",
+        "RUN",
+        "FSLR"
+      ],
+      "avg_vars": -0.127
+    },
+    {
+      "name": "Health / GLP-1",
+      "count": 9,
+      "symbols": [
+        "REGN",
+        "VRTX",
+        "LLY",
+        "DXCM",
+        "ISRG",
+        "PODD",
+        "NVO",
+        "HIMS",
+        "HIMS"
+      ],
+      "avg_vars": -0.153
+    },
+    {
       "name": "Crypto / BTC",
       "count": 3,
       "symbols": [
@@ -77,13 +131,13 @@
       "avg_vars": -0.171
     },
     {
-      "name": "Consumer Growth",
+      "name": "Quantum Computing",
       "count": 4,
       "symbols": [
-        "DECK",
-        "CELH",
-        "DUOL",
-        "HIMS"
+        "IONQ",
+        "RGTI",
+        "QUBT",
+        "QBTS"
       ],
       "avg_vars": -0.173
     },
@@ -98,6 +152,15 @@
         "LEU"
       ],
       "avg_vars": -0.183
+    },
+    {
+      "name": "eVTOL / Urban Air",
+      "count": 2,
+      "symbols": [
+        "ACHR",
+        "JOBY"
+      ],
+      "avg_vars": -0.187
     },
     {
       "name": "Consumer Internet",
@@ -117,16 +180,29 @@
       "avg_vars": -0.2
     },
     {
+      "name": "Space",
+      "count": 4,
+      "symbols": [
+        "LUNR",
+        "RKLB",
+        "RDW",
+        "ASTS"
+      ],
+      "avg_vars": -0.244
+    },
+    {
       "name": "Social / Ad-Tech",
-      "count": 5,
+      "count": 7,
       "symbols": [
         "META",
         "APP",
         "GOOG",
+        "GOOG",
         "RDDT",
+        "DUOL",
         "DUOL"
       ],
-      "avg_vars": -0.219
+      "avg_vars": -0.245
     },
     {
       "name": "Cloud / SaaS",
@@ -138,8 +214,8 @@
         "NOW",
         "MDB",
         "CRM",
-        "SNOW",
         "ADBE",
+        "SNOW",
         "CRWD",
         "OKTA",
         "PANW",
@@ -165,35 +241,43 @@
   "sectors": [
     {
       "name": "Technology",
-      "count": 44
-    },
-    {
-      "name": "Consumer Cyclical",
-      "count": 10
+      "count": 88
     },
     {
       "name": "Healthcare",
-      "count": 8
-    },
-    {
-      "name": "Financial Services",
-      "count": 6
+      "count": 33
     },
     {
       "name": "Industrials",
-      "count": 5
+      "count": 30
+    },
+    {
+      "name": "Consumer Cyclical",
+      "count": 24
+    },
+    {
+      "name": "Financial Services",
+      "count": 17
     },
     {
       "name": "Communication Services",
-      "count": 5
+      "count": 16
     },
     {
-      "name": "Utilities",
-      "count": 3
+      "name": "Basic Materials",
+      "count": 7
     },
     {
       "name": "Consumer Defensive",
-      "count": 1
+      "count": 6
+    },
+    {
+      "name": "Utilities",
+      "count": 6
+    },
+    {
+      "name": "Real Estate",
+      "count": 5
     },
     {
       "name": "Energy",
