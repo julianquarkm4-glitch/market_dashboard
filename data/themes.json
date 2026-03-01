@@ -1,18 +1,6 @@
 {
   "themes": [
     {
-      "name": "Defense",
-      "count": 5,
-      "symbols": [
-        "LMT",
-        "NOC",
-        "RTX",
-        "GD",
-        "AXON"
-      ],
-      "avg_vars": 0.161
-    },
-    {
       "name": "Gold / Mining",
       "count": 5,
       "symbols": [
@@ -25,24 +13,28 @@
       "avg_vars": 0.037
     },
     {
+      "name": "Defense",
+      "count": 1,
+      "symbols": [
+        "AXON"
+      ],
+      "avg_vars": 0.0
+    },
+    {
       "name": "AI / Chips",
-      "count": 13,
+      "count": 9,
       "symbols": [
         "ARM",
-        "TSM",
         "AMAT",
-        "ASML",
         "LRCX",
         "MRVL",
         "MU",
         "AVGO",
         "KLAC",
         "INTC",
-        "NVDA",
-        "QCOM",
         "AMD"
       ],
-      "avg_vars": 0.005
+      "avg_vars": -0.004
     },
     {
       "name": "AI Infrastructure",
@@ -57,23 +49,6 @@
         "LEU"
       ],
       "avg_vars": -0.026
-    },
-    {
-      "name": "Consumer Growth",
-      "count": 10,
-      "symbols": [
-        "BIRK",
-        "CAVA",
-        "DECK",
-        "ONON",
-        "ELF",
-        "CELH",
-        "DUOL",
-        "DUOL",
-        "HIMS",
-        "HIMS"
-      ],
-      "avg_vars": -0.081
     },
     {
       "name": "Space / Defense",
@@ -94,31 +69,14 @@
     },
     {
       "name": "EV / Clean Energy",
-      "count": 5,
+      "count": 4,
       "symbols": [
         "ENPH",
         "SEDG",
-        "TSLA",
         "RUN",
         "FSLR"
       ],
-      "avg_vars": -0.127
-    },
-    {
-      "name": "Health / GLP-1",
-      "count": 9,
-      "symbols": [
-        "REGN",
-        "VRTX",
-        "LLY",
-        "DXCM",
-        "ISRG",
-        "PODD",
-        "NVO",
-        "HIMS",
-        "HIMS"
-      ],
-      "avg_vars": -0.153
+      "avg_vars": -0.12
     },
     {
       "name": "Crypto / BTC",
@@ -163,21 +121,18 @@
       "avg_vars": -0.187
     },
     {
-      "name": "Consumer Internet",
-      "count": 10,
+      "name": "Consumer Growth",
+      "count": 7,
       "symbols": [
-        "ABNB",
-        "UBER",
-        "GRAB",
-        "SHOP",
-        "DASH",
-        "EXPE",
-        "LYFT",
-        "SE",
-        "BKNG",
-        "MELI"
+        "CAVA",
+        "ELF",
+        "CELH",
+        "DUOL",
+        "DUOL",
+        "HIMS",
+        "HIMS"
       ],
-      "avg_vars": -0.2
+      "avg_vars": -0.224
     },
     {
       "name": "Space",
@@ -191,22 +146,23 @@
       "avg_vars": -0.244
     },
     {
-      "name": "Social / Ad-Tech",
-      "count": 7,
+      "name": "Consumer Internet",
+      "count": 8,
       "symbols": [
-        "META",
-        "APP",
-        "GOOG",
-        "GOOG",
-        "RDDT",
-        "DUOL",
-        "DUOL"
+        "GRAB",
+        "SHOP",
+        "DASH",
+        "EXPE",
+        "LYFT",
+        "SE",
+        "BKNG",
+        "MELI"
       ],
-      "avg_vars": -0.245
+      "avg_vars": -0.247
     },
     {
       "name": "Cloud / SaaS",
-      "count": 14,
+      "count": 13,
       "symbols": [
         "FTNT",
         "NET",
@@ -214,7 +170,6 @@
         "NOW",
         "MDB",
         "CRM",
-        "ADBE",
         "SNOW",
         "CRWD",
         "OKTA",
@@ -223,7 +178,18 @@
         "MNDY",
         "TEAM"
       ],
-      "avg_vars": -0.281
+      "avg_vars": -0.282
+    },
+    {
+      "name": "Social / Ad-Tech",
+      "count": 4,
+      "symbols": [
+        "APP",
+        "RDDT",
+        "DUOL",
+        "DUOL"
+      ],
+      "avg_vars": -0.294
     },
     {
       "name": "Fintech",
@@ -236,48 +202,53 @@
         "SOFI"
       ],
       "avg_vars": -0.371
+    },
+    {
+      "name": "Health / GLP-1",
+      "count": 2,
+      "symbols": [
+        "HIMS",
+        "HIMS"
+      ],
+      "avg_vars": -0.639
     }
   ],
   "sectors": [
     {
       "name": "Technology",
-      "count": 88
+      "count": 72
     },
     {
       "name": "Healthcare",
-      "count": 33
-    },
-    {
-      "name": "Industrials",
-      "count": 30
+      "count": 15
     },
     {
       "name": "Consumer Cyclical",
-      "count": 24
+      "count": 13
     },
     {
-      "name": "Financial Services",
-      "count": 17
+      "name": "Industrials",
+      "count": 12
     },
     {
       "name": "Communication Services",
-      "count": 16
+      "count": 11
+    },
+    {
+      "name": "Financial Services",
+      "count": 10
     },
     {
       "name": "Basic Materials",
       "count": 7
     },
     {
-      "name": "Consumer Defensive",
-      "count": 6
-    },
-    {
       "name": "Utilities",
-      "count": 6
+      "count": 3
     },
     {
-      "name": "Real Estate",
-      "count": 5
+      "name": "Consumer Defensive",
+      "count": 2
     },
     {
       "name": "Energy",

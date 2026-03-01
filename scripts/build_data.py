@@ -347,6 +347,9 @@ def build_screener_data(out_dir):
             print(f"  ERROR processing {ticker}: {e}")
             continue
 
+    # Hard filter: ADR% must be >= 4% on daily (Qullamaggie rule — stocks below don't move enough)
+    results = [r for r in results if r.get("adr_pct", 0) >= 4.0]
+
     results.sort(key=lambda x: x.get("vars_1m", 0), reverse=True)
     print(f"  Screener complete: {len(results)} stocks processed")
     return results
