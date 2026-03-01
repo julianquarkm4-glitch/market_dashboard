@@ -1,0 +1,44 @@
+[
+  {
+    "type": "earnings",
+    "symbol": "NVDA",
+    "text": "NVDA Earnings",
+    "date": "2026-05-20",
+    "impact": "high"
+  },
+  {
+    "type": "earnings",
+    "symbol": "PLTR",
+    "text": "PLTR Earnings",
+    "date": "2026-05-04",
+    "impact": "high"
+  },
+  {
+    "type": "earnings",
+    "symbol": "COIN",
+    "text": "COIN Earnings",
+    "date": "2026-05-07",
+    "impact": "high"
+  },
+  {
+    "type": "earnings",
+    "symbol": "HOOD",
+    "text": "HOOD Earnings",
+    "date": "2026-04-29",
+    "impact": "high"
+  },
+  {
+    "type": "earnings",
+    "symbol": "MSTR",
+    "text": "MSTR Earnings",
+    "date": "2026-04-30",
+    "impact": "high"
+  },
+  {
+    "type": "earnings",
+    "symbol": "APP",
+    "text": "APP Earnings",
+    "date": "2026-05-06",
+    "impact": "high"
+  }
+]

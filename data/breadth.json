@@ -1,0 +1,13 @@
+{
+  "vix": 19.86,
+  "vix_5d_ago": 21.01,
+  "vix_status": "GREEN",
+  "rsp_1m_ret": 3.38,
+  "spy_1m_ret": -1.36,
+  "rsp_spy_divergence": 4.74,
+  "iwm_1m_ret": -0.72,
+  "pct_above_20ma": 52.9,
+  "pct_above_50ma": 58.8,
+  "regime": "CAUTIOUS",
+  "regime_color": "yellow"
+}
