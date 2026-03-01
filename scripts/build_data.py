@@ -66,6 +66,55 @@ INDUSTRY_ETFS = {
     "URA": "Uranium", "COPX": "Copper Miners",
 }
 
+# ==============================================================
+# THEMATIC TAGS (cross-sector, manually curated)
+# ==============================================================
+
+THEME_MAP = {
+    "AI / Chips": ["NVDA", "AMD", "AVGO", "ARM", "MRVL", "TSM", "ASML", "KLAC", "LRCX", "AMAT", "QCOM", "MU", "INTC"],
+    "AI Infrastructure": ["VST", "CEG", "GEV", "OKLO", "SMR", "NNE", "LEU"],
+    "Cloud / SaaS": ["NOW", "CRM", "ADBE", "SNOW", "DDOG", "MDB", "NET", "CRWD", "PANW", "FTNT", "ZS", "OKTA", "MNDY", "TEAM"],
+    "Crypto / BTC": ["COIN", "MSTR", "HOOD"],
+    "Fintech": ["SQ", "AFRM", "UPST", "NU", "SOFI", "HOOD"],
+    "Consumer Internet": ["SHOP", "MELI", "SE", "GRAB", "UBER", "LYFT", "DASH", "ABNB", "BKNG", "EXPE"],
+    "Social / Ad-Tech": ["META", "RDDT", "DUOL", "APP", "GOOG"],
+    "Nuclear": ["OKLO", "SMR", "NNE", "LEU", "CEG"],
+    "Space / Defense": ["RKLB", "AXON"],
+    "Quantum": ["IONQ"],
+    "Health / GLP-1": ["LLY", "NVO", "REGN", "VRTX", "ISRG", "DXCM", "PODD", "HIMS"],
+    "Consumer Growth": ["CELH", "DECK", "DUOL", "HIMS"],
+}
+
+# Reverse lookup: ticker -> list of themes
+TICKER_THEMES = {}
+for _theme, _tickers in THEME_MAP.items():
+    for _t in _tickers:
+        TICKER_THEMES.setdefault(_t, []).append(_theme)
+
+# Sector info cache
+_sector_cache = {}
+
+def get_stock_info(ticker):
+    """Get sector, industry, and thematic tags via yfinance."""
+    if ticker in _sector_cache:
+        return _sector_cache[ticker]
+    try:
+        t = yf.Ticker(ticker)
+        info = t.info or {}
+        result = {
+            "sector": info.get("sector", "Unknown"),
+            "industry": info.get("industry", "Unknown"),
+            "themes": TICKER_THEMES.get(ticker, []),
+        }
+    except Exception:
+        result = {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "themes": TICKER_THEMES.get(ticker, []),
+        }
+    _sector_cache[ticker] = result
+    return result
+
 
 # ══════════════════════════════════════════════════════════
 # CORE CALCULATIONS
@@ -217,10 +266,16 @@ def build_screener_data(out_dir):
             warnings = get_warnings(ma_info, atr_ext, adr_pct)
             avg_vol = df["Volume"].rolling(20).mean().iloc[-1]
 
+            # Get sector + theme data
+            stock_info = get_stock_info(ticker)
+
             results.append({
                 "symbol": ticker,
                 "close": round(close, 2),
                 "avg_volume": int(avg_vol) if not pd.isna(avg_vol) else 0,
+                "sector": stock_info["sector"],
+                "industry": stock_info["industry"],
+                "themes": stock_info["themes"],
                 "pct_1w": perf.get("1W"),
                 "pct_1m": perf.get("1M"),
                 "pct_3m": perf.get("3M"),
@@ -421,11 +476,35 @@ def main():
     write_json("sectors.json", sectors)
     write_json("breadth.json", breadth)
     write_json("calendar.json", calendar)
+    # Build themes index for UI filter bars
+    themes_index = {}
+    for s in screener:
+        for theme in s.get("themes", []):
+            if theme not in themes_index:
+                themes_index[theme] = {"name": theme, "count": 0, "symbols": []}
+            themes_index[theme]["count"] += 1
+            themes_index[theme]["symbols"].append(s["symbol"])
+    
+    # Build sectors index for UI filter bars
+    sectors_index = {}
+    for s in screener:
+        sec = s.get("sector", "Unknown")
+        if sec not in sectors_index:
+            sectors_index[sec] = {"name": sec, "count": 0}
+        sectors_index[sec]["count"] += 1
+
+    write_json("themes.json", {
+        "themes": sorted(themes_index.values(), key=lambda x: x["count"], reverse=True),
+        "sectors": sorted(sectors_index.values(), key=lambda x: x["count"], reverse=True),
+    })
+
     write_json("meta.json", {
         "built_at": datetime.now().isoformat(),
         "universe_size": len(SCAN_UNIVERSE),
         "screener_results": len(screener),
-        "version": "1.0.0",
+        "themes_count": len(themes_index),
+        "sectors_count": len(sectors_index),
+        "version": "1.1.0",
         "source": "yfinance",
         "note": "ATR extension and VARS formulas adapted from traderwillhu/market_dashboard"
     })
@@ -433,6 +512,7 @@ def main():
     print(f"\n=== PIPELINE COMPLETE ===")
     print(f"  {len(screener)} stocks in screener")
     print(f"  {sum(len(v) for v in sectors.values())} ETFs tracked")
+    print(f"  {len(themes_index)} themes, {len(sectors_index)} sectors")
     print(f"  Breadth regime: {breadth.get('regime', 'UNKNOWN')}")
 
 if __name__ == "__main__":

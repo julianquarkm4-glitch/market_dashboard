@@ -1,0 +1,191 @@
+{
+  "themes": [
+    {
+      "name": "Cloud / SaaS",
+      "count": 14,
+      "symbols": [
+        "FTNT",
+        "NET",
+        "DDOG",
+        "NOW",
+        "MDB",
+        "CRM",
+        "SNOW",
+        "ADBE",
+        "CRWD",
+        "OKTA",
+        "PANW",
+        "ZS",
+        "MNDY",
+        "TEAM"
+      ]
+    },
+    {
+      "name": "AI / Chips",
+      "count": 13,
+      "symbols": [
+        "ARM",
+        "TSM",
+        "AMAT",
+        "ASML",
+        "LRCX",
+        "MRVL",
+        "MU",
+        "AVGO",
+        "KLAC",
+        "INTC",
+        "NVDA",
+        "QCOM",
+        "AMD"
+      ]
+    },
+    {
+      "name": "Consumer Internet",
+      "count": 10,
+      "symbols": [
+        "ABNB",
+        "UBER",
+        "GRAB",
+        "SHOP",
+        "DASH",
+        "EXPE",
+        "LYFT",
+        "SE",
+        "BKNG",
+        "MELI"
+      ]
+    },
+    {
+      "name": "Health / GLP-1",
+      "count": 8,
+      "symbols": [
+        "REGN",
+        "VRTX",
+        "LLY",
+        "DXCM",
+        "ISRG",
+        "PODD",
+        "NVO",
+        "HIMS"
+      ]
+    },
+    {
+      "name": "AI Infrastructure",
+      "count": 7,
+      "symbols": [
+        "GEV",
+        "CEG",
+        "VST",
+        "NNE",
+        "OKLO",
+        "SMR",
+        "LEU"
+      ]
+    },
+    {
+      "name": "Nuclear",
+      "count": 5,
+      "symbols": [
+        "CEG",
+        "NNE",
+        "OKLO",
+        "SMR",
+        "LEU"
+      ]
+    },
+    {
+      "name": "Social / Ad-Tech",
+      "count": 5,
+      "symbols": [
+        "META",
+        "APP",
+        "GOOG",
+        "RDDT",
+        "DUOL"
+      ]
+    },
+    {
+      "name": "Fintech",
+      "count": 5,
+      "symbols": [
+        "HOOD",
+        "NU",
+        "UPST",
+        "AFRM",
+        "SOFI"
+      ]
+    },
+    {
+      "name": "Consumer Growth",
+      "count": 4,
+      "symbols": [
+        "DECK",
+        "CELH",
+        "DUOL",
+        "HIMS"
+      ]
+    },
+    {
+      "name": "Crypto / BTC",
+      "count": 3,
+      "symbols": [
+        "MSTR",
+        "COIN",
+        "HOOD"
+      ]
+    },
+    {
+      "name": "Space / Defense",
+      "count": 2,
+      "symbols": [
+        "AXON",
+        "RKLB"
+      ]
+    },
+    {
+      "name": "Quantum",
+      "count": 1,
+      "symbols": [
+        "IONQ"
+      ]
+    }
+  ],
+  "sectors": [
+    {
+      "name": "Technology",
+      "count": 44
+    },
+    {
+      "name": "Consumer Cyclical",
+      "count": 10
+    },
+    {
+      "name": "Healthcare",
+      "count": 8
+    },
+    {
+      "name": "Financial Services",
+      "count": 6
+    },
+    {
+      "name": "Industrials",
+      "count": 5
+    },
+    {
+      "name": "Communication Services",
+      "count": 5
+    },
+    {
+      "name": "Utilities",
+      "count": 3
+    },
+    {
+      "name": "Consumer Defensive",
+      "count": 1
+    },
+    {
+      "name": "Energy",
+      "count": 1
+    }
+  ]
+}
