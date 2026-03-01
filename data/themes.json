@@ -1,6 +1,134 @@
 {
   "themes": [
     {
+      "name": "AI / Chips",
+      "count": 13,
+      "symbols": [
+        "ARM",
+        "TSM",
+        "AMAT",
+        "ASML",
+        "LRCX",
+        "MRVL",
+        "MU",
+        "AVGO",
+        "KLAC",
+        "INTC",
+        "NVDA",
+        "QCOM",
+        "AMD"
+      ],
+      "avg_vars": 0.005
+    },
+    {
+      "name": "AI Infrastructure",
+      "count": 7,
+      "symbols": [
+        "GEV",
+        "CEG",
+        "VST",
+        "NNE",
+        "OKLO",
+        "SMR",
+        "LEU"
+      ],
+      "avg_vars": -0.026
+    },
+    {
+      "name": "Health / GLP-1",
+      "count": 8,
+      "symbols": [
+        "REGN",
+        "VRTX",
+        "LLY",
+        "DXCM",
+        "ISRG",
+        "PODD",
+        "NVO",
+        "HIMS"
+      ],
+      "avg_vars": -0.092
+    },
+    {
+      "name": "Space / Defense",
+      "count": 2,
+      "symbols": [
+        "AXON",
+        "RKLB"
+      ],
+      "avg_vars": -0.11
+    },
+    {
+      "name": "Quantum",
+      "count": 1,
+      "symbols": [
+        "IONQ"
+      ],
+      "avg_vars": -0.115
+    },
+    {
+      "name": "Crypto / BTC",
+      "count": 3,
+      "symbols": [
+        "MSTR",
+        "COIN",
+        "HOOD"
+      ],
+      "avg_vars": -0.171
+    },
+    {
+      "name": "Consumer Growth",
+      "count": 4,
+      "symbols": [
+        "DECK",
+        "CELH",
+        "DUOL",
+        "HIMS"
+      ],
+      "avg_vars": -0.173
+    },
+    {
+      "name": "Nuclear",
+      "count": 5,
+      "symbols": [
+        "CEG",
+        "NNE",
+        "OKLO",
+        "SMR",
+        "LEU"
+      ],
+      "avg_vars": -0.183
+    },
+    {
+      "name": "Consumer Internet",
+      "count": 10,
+      "symbols": [
+        "ABNB",
+        "UBER",
+        "GRAB",
+        "SHOP",
+        "DASH",
+        "EXPE",
+        "LYFT",
+        "SE",
+        "BKNG",
+        "MELI"
+      ],
+      "avg_vars": -0.2
+    },
+    {
+      "name": "Social / Ad-Tech",
+      "count": 5,
+      "symbols": [
+        "META",
+        "APP",
+        "GOOG",
+        "RDDT",
+        "DUOL"
+      ],
+      "avg_vars": -0.219
+    },
+    {
       "name": "Cloud / SaaS",
       "count": 14,
       "symbols": [
@@ -18,91 +146,8 @@
         "ZS",
         "MNDY",
         "TEAM"
-      ]
-    },
-    {
-      "name": "AI / Chips",
-      "count": 13,
-      "symbols": [
-        "ARM",
-        "TSM",
-        "AMAT",
-        "ASML",
-        "LRCX",
-        "MRVL",
-        "MU",
-        "AVGO",
-        "KLAC",
-        "INTC",
-        "NVDA",
-        "QCOM",
-        "AMD"
-      ]
-    },
-    {
-      "name": "Consumer Internet",
-      "count": 10,
-      "symbols": [
-        "ABNB",
-        "UBER",
-        "GRAB",
-        "SHOP",
-        "DASH",
-        "EXPE",
-        "LYFT",
-        "SE",
-        "BKNG",
-        "MELI"
-      ]
-    },
-    {
-      "name": "Health / GLP-1",
-      "count": 8,
-      "symbols": [
-        "REGN",
-        "VRTX",
-        "LLY",
-        "DXCM",
-        "ISRG",
-        "PODD",
-        "NVO",
-        "HIMS"
-      ]
-    },
-    {
-      "name": "AI Infrastructure",
-      "count": 7,
-      "symbols": [
-        "GEV",
-        "CEG",
-        "VST",
-        "NNE",
-        "OKLO",
-        "SMR",
-        "LEU"
-      ]
-    },
-    {
-      "name": "Nuclear",
-      "count": 5,
-      "symbols": [
-        "CEG",
-        "NNE",
-        "OKLO",
-        "SMR",
-        "LEU"
-      ]
-    },
-    {
-      "name": "Social / Ad-Tech",
-      "count": 5,
-      "symbols": [
-        "META",
-        "APP",
-        "GOOG",
-        "RDDT",
-        "DUOL"
-      ]
+      ],
+      "avg_vars": -0.281
     },
     {
       "name": "Fintech",
@@ -113,41 +158,8 @@
         "UPST",
         "AFRM",
         "SOFI"
-      ]
-    },
-    {
-      "name": "Consumer Growth",
-      "count": 4,
-      "symbols": [
-        "DECK",
-        "CELH",
-        "DUOL",
-        "HIMS"
-      ]
-    },
-    {
-      "name": "Crypto / BTC",
-      "count": 3,
-      "symbols": [
-        "MSTR",
-        "COIN",
-        "HOOD"
-      ]
-    },
-    {
-      "name": "Space / Defense",
-      "count": 2,
-      "symbols": [
-        "AXON",
-        "RKLB"
-      ]
-    },
-    {
-      "name": "Quantum",
-      "count": 1,
-      "symbols": [
-        "IONQ"
-      ]
+      ],
+      "avg_vars": -0.371
     }
   ],
   "sectors": [

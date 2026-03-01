@@ -476,14 +476,20 @@ def main():
     write_json("sectors.json", sectors)
     write_json("breadth.json", breadth)
     write_json("calendar.json", calendar)
-    # Build themes index for UI filter bars
+    # Build themes index for UI filter bars + momentum ranking
     themes_index = {}
     for s in screener:
         for theme in s.get("themes", []):
             if theme not in themes_index:
-                themes_index[theme] = {"name": theme, "count": 0, "symbols": []}
+                themes_index[theme] = {"name": theme, "count": 0, "symbols": [], "vars_values": []}
             themes_index[theme]["count"] += 1
             themes_index[theme]["symbols"].append(s["symbol"])
+            themes_index[theme]["vars_values"].append(s.get("vars_1m", 0))
+    
+    # Calculate avg VARS per theme and clean up
+    for t in themes_index.values():
+        vals = t.pop("vars_values")
+        t["avg_vars"] = round(sum(vals) / len(vals), 3) if vals else 0
     
     # Build sectors index for UI filter bars
     sectors_index = {}
@@ -494,7 +500,7 @@ def main():
         sectors_index[sec]["count"] += 1
 
     write_json("themes.json", {
-        "themes": sorted(themes_index.values(), key=lambda x: x["count"], reverse=True),
+        "themes": sorted(themes_index.values(), key=lambda x: x["avg_vars"], reverse=True),
         "sectors": sorted(sectors_index.values(), key=lambda x: x["count"], reverse=True),
     })
 
